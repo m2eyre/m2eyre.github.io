@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stash&amp;Store automated coin ATM | Matthew Eyre</title>
+  <meta name="description" content="Stash&Store, an automated coin ATM built for ME 101 from VEX IQ, 3D-printed and laser-cut parts, with crank-driven coin pushers. 98% dispensing accuracy.">
+  <meta name="author" content="Matthew Eyre">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Stash&amp;Store automated coin ATM | Matthew Eyre">
+  <meta property="og:description" content="Stash&Store, an automated coin ATM built for ME 101 from VEX IQ, 3D-printed and laser-cut parts, with crank-driven coin pushers. 98% dispensing accuracy.">
+  <meta property="og:image" content="https://m2eyre.github.io/assets/img/og-image.jpg">
+  <meta name="theme-color" content="#0d1b2a">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../">Matthew Eyre</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="../#projects" aria-current="page">Projects</a></li>
+          <li><a href="../#skills">Skills</a></li>
+          <li><a href="../#experience">Experience</a></li>
+          <li><a href="../#about">About</a></li>
+          <li><a href="../#contact">Contact</a></li>
+          <li><a class="nav-resume" href="../assets/resume/Matthew-Eyre-Resume.pdf">Resume (PDF)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <header class="case-header">
+        <p class="breadcrumb"><a href="../#projects">Projects</a> / ME 101</p>
+        <h1>Stash&amp;Store automated coin ATM</h1>
+        <p class="case-lede">An automated coin management system that accepts, identifies, stores and dispenses coins for any number of users, built from VEX IQ components, 3D-printed mechanisms and a laser-cut case.</p>
+        <dl class="title-block">
+        <div><dt>Course</dt><dd>ME 101, University of Waterloo</dd></div>
+        <div><dt>Timeframe</dt><dd>Sep 2025 to Apr 2026</dd></div>
+        <div><dt>Focus</dt><dd>Mechanism design, sensing, C++ control</dd></div>
+        <div><dt>Tools</dt><dd>SOLIDWORKS, C++, 3D printing, laser cutting</dd></div>
+        </dl>
+      </header>
+
+      <div class="case-body">
+        <nav class="case-toc" aria-label="On this page">
+          <p>On this page</p>
+          <ol>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#contribution">My contribution</a></li>
+            <li><a href="#requirements">Constraints</a></li>
+            <li><a href="#design">Mechanism design</a></li>
+            <li><a href="#testing">Testing and results</a></li>
+            <li><a href="#result">Takeaways</a></li>
+          </ol>
+        </nav>
+        <div>
+        <section class="case-section" id="overview">
+          <h2>Overview</h2>
+          <p>Stash&amp;Store works like a small ATM for coins. A user authenticates, deposits coins that the machine identifies and sorts into storage, and later withdraws them. It integrates mechanical storage and dispensing with VEX motors, optical and inertial sensing, and a user interface on one controller.</p>
+          <div class="figure-row two">
+          <figure class="sheet">
+            <a href="../assets/img/atm-exterior.webp"><img src="../assets/img/atm-exterior.webp" width="1209" height="1371" loading="lazy" alt="The finished Stash&amp;Store ATM: a laser-cut hardboard enclosure with a sloped top holding the controller screen, a coin slot, and a side opening for the coin tray."></a>
+            <figcaption><span class="fig-no">Fig. 1</span><span class="fig-text">Finished prototype.</span></figcaption>
+          </figure>
+          <figure class="sheet">
+            <a href="../assets/img/atm-full-cad.webp"><img src="../assets/img/atm-full-cad.webp" width="1600" height="1370" loading="lazy" alt="SOLIDWORKS model of the ATM with the lid open, showing the three coin storage tubes, three crank-driven pusher mechanisms and the motor housings below them."></a>
+            <figcaption><span class="fig-no">Fig. 2</span><span class="fig-text">Complete CAD model, lid open.</span></figcaption>
+          </figure>
+          </div>
+        </section>
+
+        <section class="case-section" id="contribution">
+          <h2>My contribution</h2>
+          <p>Across the project I designed, manufactured and programmed parts of the machine:</p>
+          <ul>
+            <li>Designed the casing, the coin sorting and dispensing mechanisms, and the mounts for the motors and optical sensors.</li>
+            <li>Designed the kinematic coin-pushing mechanism (crank shaft, piston arm and coin pusher) and iterated on it until it stopped jamming and handled different coin sizes reliably.</li>
+            <li>Built parts by 3D printing, laser cutting and manual fabrication.</li>
+            <li>Integrated the VEX motors, optical and inertial sensing in C++ using modular software with centralized state management.</li>
+          </ul>
+          <p>The control code is on GitHub: <a href="https://github.com/m2eyre/ME101-ATM">m2eyre/ME101-ATM</a>.</p>
+          <p class="todo">Team size and how the work was split, so recruiters can see which parts were yours alone.</p>
+        </section>
+
+        <section class="case-section" id="requirements">
+          <h2>Constraints</h2>
+          <ul>
+            <li>Mechanical storage and dispensing had to work within the limits of the VEX IQ platform.</li>
+            <li>Optical sensor readings vary from coin to coin, so recognition had to tolerate noise.</li>
+            <li>Mechanical tolerances on printed parts affect whether coins feed cleanly or jam.</li>
+            <li>The system had to stay responsive and handle faults, including tampering.</li>
+          </ul>
+        </section>
+
+        <section class="case-section" id="design">
+          <h2>Mechanism design</h2>
+          <p>Each coin size has its own storage tube above a pusher. A motor below drives a crank shaft, which moves a piston arm and slides the coin pusher under the stack to eject one coin at a time. The motor housing sits directly beneath the pusher base.</p>
+          <div class="figure-single">
+          <figure class="sheet">
+            <a href="../assets/img/atm-mechanism-annotated.webp"><img src="../assets/img/atm-mechanism-annotated.webp" width="1600" height="1393" loading="lazy" alt="Annotated side section of the dispensing mechanism: coin storage bin above, coin pusher, piston arm, crank shaft and pusher base on the deck, with the motor and motor housing below."></a>
+            <figcaption><span class="fig-no">Fig. 3</span><span class="fig-text">Dispensing mechanism in section: storage bin, pusher, piston arm, crank shaft, motor housing.</span></figcaption>
+          </figure>
+          </div>
+          <div class="figure-row two">
+          <figure class="sheet">
+            <a href="../assets/img/atm-mechanism-photo.webp"><img src="../assets/img/atm-mechanism-photo.webp" width="1534" height="1377" loading="lazy" alt="Photo of the printed dispensing module: three white storage tubes behind three printed crank-and-pusher assemblies on a hardboard base."></a>
+            <figcaption><span class="fig-no">Fig. 4</span><span class="fig-text">Printed dispensing module in the prototype.</span></figcaption>
+          </figure>
+          <figure class="sheet">
+            <a href="../assets/img/atm-coin-sorter-cad.webp"><img src="../assets/img/atm-coin-sorter-cad.webp" width="1390" height="711" loading="lazy" alt="CAD view of the coin sorter plate with three circular openings of increasing diameter."></a>
+            <figcaption><span class="fig-no">Fig. 5</span><span class="fig-text">Coin sorting plate in CAD, one opening per coin size.</span></figcaption>
+          </figure>
+          </div>
+          <p>The motors and optical sensors sit in custom printed mounts that locate them against the case and keep cables clear.</p>
+          <div class="figure-row two">
+          <figure class="sheet">
+            <a href="../assets/img/atm-motor-mounts.webp"><img src="../assets/img/atm-motor-mounts.webp" width="1532" height="1173" loading="lazy" alt="Three purple 3D-printed motor mounts, each holding a VEX motor, fitted into an opening in the hardboard case."></a>
+            <figcaption><span class="fig-no">Fig. 6</span><span class="fig-text">Printed motor mounts.</span></figcaption>
+          </figure>
+          <figure class="sheet">
+            <a href="../assets/img/atm-sensor-mount.webp"><img src="../assets/img/atm-sensor-mount.webp" width="1536" height="2048" loading="lazy" alt="A white printed mount holding a VEX optical sensor against the inside of the case."></a>
+            <figcaption><span class="fig-no">Fig. 7</span><span class="fig-text">Printed optical sensor mount.</span></figcaption>
+          </figure>
+          </div>
+          <p class="todo">Design alternatives you tried for the pusher before settling on the crank and piston arm, and what caused the jams you fixed.</p>
+        </section>
+
+        <section class="case-section" id="testing">
+          <h2>Testing and results</h2>
+          <div class="results">
+            <div><strong>98%</strong><span>dispensing accuracy</span></div>
+            <div><strong>96.7%</strong><span>coin detection</span></div>
+            <div><strong>100%</strong><span>final project grade</span></div>
+          </div>
+          <ul>
+            <li>Demonstrated automated deposit, storage, withdrawal and user authentication.</li>
+            <li>Added tamper detection using the inertial sensor.</li>
+            <li>Modular software with centralized state management made debugging and system control simpler.</li>
+          </ul>
+          <p class="todo">How accuracy and detection were measured (number of trials, coin types).</p>
+        </section>
+
+        <section class="case-section" id="result">
+          <h2>Takeaways</h2>
+          <p>Stash&amp;Store brought mechanical components, sensors, actuators, software and user interaction together in one working prototype. The hardest problems were at the boundaries between them: reliable coin recognition despite sensor variation, and storage and dispensing inside the VEX IQ platform's limits.</p>
+          <p class="todo">A lesson learned in your own words.</p>
+        </section>
+
+          <nav class="next-project" aria-label="More projects">
+            <a class="text-link" href="cubesat.html">Previous: CubeSat structural frame</a>
+            <a class="text-link" href="sky-launcher.html">Next: Sky Launcher</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year">2026</span> Matthew Eyre</p>
+      <p><a href="../">Home</a> · <a href="mailto:m2eyre@uwaterloo.ca">m2eyre@uwaterloo.ca</a></p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

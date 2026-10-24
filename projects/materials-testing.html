@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Materials testing labs | Matthew Eyre</title>
+  <meta name="description" content="Charpy impact, tensile, beam deflection and creep testing: experimental results compared against theoretical models.">
+  <meta name="author" content="Matthew Eyre">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Materials testing labs | Matthew Eyre">
+  <meta property="og:description" content="Charpy impact, tensile, beam deflection and creep testing: experimental results compared against theoretical models.">
+  <meta property="og:image" content="https://m2eyre.github.io/assets/img/og-image.jpg">
+  <meta name="theme-color" content="#0d1b2a">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../">Matthew Eyre</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="../#projects" aria-current="page">Projects</a></li>
+          <li><a href="../#skills">Skills</a></li>
+          <li><a href="../#experience">Experience</a></li>
+          <li><a href="../#about">About</a></li>
+          <li><a href="../#contact">Contact</a></li>
+          <li><a class="nav-resume" href="../assets/resume/Matthew-Eyre-Resume.pdf">Resume (PDF)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <header class="case-header">
+        <p class="breadcrumb"><a href="../#projects">Projects</a> / Testing</p>
+        <h1>Materials testing labs</h1>
+        <p class="case-lede">A series of mechanical tests to characterize material behaviour, investigate failure and compare measurements with theory.</p>
+        <dl class="title-block">
+        <div><dt>Context</dt><dd>Laboratory coursework</dd></div>
+        <div><dt>Timeframe</dt><dd>2025–2026</dd></div>
+        <div><dt>Tests</dt><dd>Charpy, fracture, tensile, deflection, creep</dd></div>
+        <div><dt>Tools</dt><dd>Excel, Python, MATLAB</dd></div>
+        </dl>
+      </header>
+
+      <div class="case-body">
+        <nav class="case-toc" aria-label="On this page">
+          <p>On this page</p>
+          <ol>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#charpy">Charpy impact and fracture toughness</a></li>
+            <li><a href="#tensile">Uniaxial tensile testing</a></li>
+            <li><a href="#deflection">Beam deflection</a></li>
+            <li><a href="#creep">Creep testing</a></li>
+            <li><a href="#result">Takeaway</a></li>
+          </ol>
+        </nav>
+        <div>
+        <section class="case-section" id="overview">
+          <h2>Overview</h2>
+          <p>These labs cover how materials respond to impact, cracks, load, temperature and time. In each one I compared the measured behaviour against the theoretical model.</p>
+          <p class="todo">The course code(s) and lab group size.</p>
+        </section>
+
+        <section class="case-section" id="charpy">
+          <h2>Charpy impact and fracture toughness</h2>
+          <p>I performed Charpy impact tests on AISI 1045 steel from −196 °C to 120 °C to map its ductile-to-brittle transition. Absorbed energy reached an upper shelf of about 93.6 J and a lower shelf of about 3.7 J, and I estimated the transition temperature at about −10.45 °C. Fracture toughness was investigated separately using polycarbonate specimens with controlled edge cracks.</p>
+          <div class="figure-row two">
+          <figure class="sheet">
+            <a href="../assets/img/charpy-specimen.webp"><img src="../assets/img/charpy-specimen.webp" width="507" height="415" loading="lazy" alt="A broken Charpy specimen of 1045 steel showing the fracture surface at the notch."></a>
+            <figcaption><span class="fig-no">Fig. 1</span><span class="fig-text">Fractured Charpy specimen.</span></figcaption>
+          </figure>
+          <figure class="sheet">
+            <a href="../assets/img/charpy-specimens.webp"><img src="../assets/img/charpy-specimens.webp" width="302" height="232" loading="lazy" alt="Several broken Charpy specimens standing upright, showing different fracture surfaces."></a>
+            <figcaption><span class="fig-no">Fig. 2</span><span class="fig-text">Specimens tested at different temperatures.</span></figcaption>
+          </figure>
+          </div>
+          <div class="figure-single">
+          <figure class="sheet">
+            <a href="../assets/img/charpy-energy-temp.webp"><img src="../assets/img/charpy-energy-temp.webp" width="1600" height="990" loading="lazy" alt="Plot of absorbed energy in joules against temperature for 1045 steel: near 3.7 J below −50 °C, rising steeply near −10 °C, and peaking at 93.6 J near 80 °C. The transition point is marked at 48.73 J and −10.45 °C."></a>
+            <figcaption><span class="fig-no">Fig. 3</span><span class="fig-text">Absorbed energy against temperature, with the transition temperature marked.</span></figcaption>
+          </figure>
+          </div>
+        </section>
+
+        <section class="case-section" id="tensile">
+          <h2>Uniaxial tensile testing</h2>
+          <p>I tested steel, heat-treated steel, aluminum, copper and annealed copper specimens, converted load–displacement data into engineering stress–strain curves, and determined Young's modulus, yield strength, ultimate tensile strength, fracture stress and percent elongation.</p>
+          <div class="figure-single">
+          <figure class="sheet">
+            <a href="../assets/img/tensile-curves.webp"><img src="../assets/img/tensile-curves.webp" width="1600" height="387" loading="lazy" alt="Two engineering stress–strain curves. Left, heat-treated steel with an upper and lower yield point, hardening, ultimate tensile strength near 300 MPa and fracture near 0.42 strain. Right, aluminum with yield near 190 MPa, ultimate near 245 MPa and fracture near 0.13 strain."></a>
+            <figcaption><span class="fig-no">Fig. 4</span><span class="fig-text">Stress–strain curves for heat-treated steel and aluminum.</span></figcaption>
+          </figure>
+          </div>
+        </section>
+
+        <section class="case-section" id="deflection">
+          <h2>Beam deflection</h2>
+          <p>I measured the load–deflection behaviour of steel, aluminum and wood cantilever beams, calculated experimental elastic moduli with classical beam theory, compared them with accepted values, and evaluated stiffness-to-weight for each material.</p>
+          <div class="figure-single">
+          <figure class="sheet">
+            <a href="../assets/img/beam-deflection.webp"><img src="../assets/img/beam-deflection.webp" width="1600" height="1143" loading="lazy" alt="Three plots of deflection in millimetres against force in newtons for steel, aluminum and wood cantilever beams, each comparing measured points and a linear fit against theoretical deflection."></a>
+            <figcaption><span class="fig-no">Fig. 5</span><span class="fig-text">Measured and theoretical deflection for steel, aluminum and wood beams.</span></figcaption>
+          </figure>
+          </div>
+        </section>
+
+        <section class="case-section" id="creep">
+          <h2>Creep testing</h2>
+          <p>I investigated time-dependent plastic deformation of Sn–Zn solder under constant uniaxial stress, identifying primary, secondary and tertiary creep and measuring steady-state creep rates at several stress levels. Using the power-law creep relationship, I calculated a stress exponent of n = 5.38.</p>
+          <p>At a matched stress of 26.66 MPa, the steady-state creep rate rose from 2.47 × 10⁻⁴ s⁻¹ at 22 °C to 2.24 × 10⁻³ s⁻¹ at 50 °C, about 9.1 times faster, and the 50 °C specimen fractured at a strain of 0.092.</p>
+          <div class="figure-single">
+          <figure class="sheet">
+            <a href="../assets/img/creep-strain-time.webp"><img src="../assets/img/creep-strain-time.webp" width="1600" height="981" loading="lazy" alt="Plot of engineering strain against time for Sn–Zn solder at 26.66 MPa. The 22 °C trial rises steadily to about 0.11 strain over 400 seconds; the 50 °C trial rises steeply and fractures at 0.092 strain after about 45 seconds."></a>
+            <figcaption><span class="fig-no">Fig. 6</span><span class="fig-text">Engineering strain against time at 22 °C and 50 °C, matched stress of 26.66 MPa.</span></figcaption>
+          </figure>
+          </div>
+        </section>
+
+        <section class="case-section" id="result">
+          <h2>Takeaway</h2>
+          <p>Across the series, comparing measurements with theory showed where simple models hold and where real materials depart from them, from the scatter in a transition curve to the gap between measured and predicted beam deflection.</p>
+          <p class="todo">Any discrepancy you explained (for example why the measured steel deflection differs from theory).</p>
+        </section>
+
+          <nav class="next-project" aria-label="More projects">
+            <a class="text-link" href="motor-dynamometer.html">Previous: Motor dynamometer</a>
+            <a class="text-link" href="machined-keychain.html">Next: Machined keychain</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year">2026</span> Matthew Eyre</p>
+      <p><a href="../">Home</a> · <a href="mailto:m2eyre@uwaterloo.ca">m2eyre@uwaterloo.ca</a></p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# GitHub Pages settings. The site is plain HTML; this file only stops
+# repo-only files from being published.
+exclude:
+  - CLAUDE.md
+  - README.md
+  - scripts/
